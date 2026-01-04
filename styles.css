@@ -53,12 +53,11 @@ body {
 .controls {
   max-width: 960px;
   margin: 16px auto;
-  padding: 14px 20px;
+  padding: 18px 24px;
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) minmax(260px, 1.25fr) auto;
+  grid-template-columns: minmax(220px, 1fr) minmax(320px, 1.35fr) minmax(150px, auto);
   align-items: end;
-  justify-items: start;
-  gap: 14px;
+  gap: 16px 14px;
   background: #fff;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
@@ -96,20 +95,20 @@ body {
 }
 
 .control.stats {
-  width: auto;
-  align-self: stretch;
+  align-self: end;
   justify-self: end;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 11px 14px;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  background: #f8fafc;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   font-weight: 600;
-  color: #0f172a;
+  color: #1f2937;
   white-space: nowrap;
-  min-height: 44px;
+  min-height: auto;
+  font-size: 15px;
 }
 
 .card-grid {
@@ -220,12 +219,10 @@ body {
 @media (max-width: 900px) {
   .controls {
     grid-template-columns: 1fr;
-    justify-items: stretch;
   }
 
   .control.stats {
-    justify-self: stretch;
-    text-align: center;
+    justify-self: end;
   }
 }
 

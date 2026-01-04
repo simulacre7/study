@@ -77,10 +77,11 @@ body {
 
 .control select,
 .control input {
+  /* Keep form controls at 16px to prevent iOS focus zoom */
   border: 1px solid #cbd5e1;
   border-radius: 8px;
   padding: 10px 12px;
-  font-size: 15px;
+  font-size: 16px;
   font-family: inherit;
   background: #f8fafc;
   transition: border-color 0.2s, box-shadow 0.2s;

@@ -45,13 +45,8 @@ body {
 }
 
 .app-header h1 {
-  margin: 2px 0 6px;
-  font-size: 28px;
-}
-
-.lead {
   margin: 0;
-  color: #475569;
+  font-size: 28px;
 }
 
 .controls {

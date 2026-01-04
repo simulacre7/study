@@ -24,11 +24,11 @@
       empty.className = 'empty-state';
       empty.textContent = '카드가 없습니다. 검색어나 필터를 조정해보세요.';
       cardsEl.appendChild(empty);
-      cardCountEl.textContent = '0 cards';
+      cardCountEl.textContent = '총 0개 카드';
       return;
     }
 
-    cardCountEl.textContent = `${list.length} cards`;
+    cardCountEl.textContent = `총 ${list.length}개 카드`;
 
     list.forEach(card => {
       const node = template.content.firstElementChild.cloneNode(true);

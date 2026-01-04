@@ -111,12 +111,14 @@ body {
   perspective: 1000px;
   cursor: pointer;
   outline: none;
+  height: 100%;
 }
 
 .card-inner {
   position: relative;
   width: 100%;
-  min-height: 200px;
+  min-height: 220px;
+  height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.5s ease;
 }
@@ -136,6 +138,7 @@ body {
   backface-visibility: hidden;
   display: grid;
   gap: 10px;
+  overflow: auto;
 }
 
 .card-front {
@@ -166,6 +169,17 @@ body {
   color: #334155;
   line-height: 1.5;
   font-size: 15px;
+}
+
+.card-face ul,
+.card-face ol {
+  margin: 0;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.card-face li + li {
+  margin-top: 6px;
 }
 
 .card-tags {

@@ -9,9 +9,14 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
+  scrollbar-gutter: stable both-edges;
 }
 
 .app-header {
@@ -52,10 +57,11 @@ body {
 .controls {
   max-width: 960px;
   margin: 16px auto;
-  padding: 12px 20px;
+  padding: 18px 24px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
+  grid-template-columns: minmax(220px, 1fr) minmax(320px, 1.35fr) minmax(150px, auto);
+  align-items: end;
+  gap: 16px 14px;
   background: #fff;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
@@ -93,9 +99,20 @@ body {
 }
 
 .control.stats {
-  align-self: center;
+  align-self: end;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   font-weight: 600;
-  color: #0f172a;
+  color: #1f2937;
+  white-space: nowrap;
+  min-height: auto;
+  font-size: 15px;
 }
 
 .card-grid {
@@ -103,7 +120,8 @@ body {
   margin: 0 auto 32px;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: stretch;
   gap: 16px;
 }
 
@@ -202,6 +220,16 @@ body {
   font-weight: 600;
 }
 
+@media (max-width: 900px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .control.stats {
+    justify-self: end;
+  }
+}
+
 @media (max-width: 600px) {
   .app-header h1 {
     font-size: 22px;
@@ -209,5 +237,10 @@ body {
 
   .card-question {
     font-size: 17px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    justify-content: stretch;
   }
 }

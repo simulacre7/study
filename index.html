@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FE Interview Flashcards</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="branding">
+        <div class="emoji">🃏</div>
+        <div>
+          <p class="eyebrow">fe-interview-prep</p>
+          <h1>Flashcards Quick View</h1>
+        </div>
+      </div>
+      <p class="lead">
+        주제별로 필터하고 검색해 플래시카드를 바로 복습하세요. 카드를 클릭하면 뒤집어서 답을 확인할 수 있습니다.
+      </p>
+    </header>
+
+    <section class="controls" aria-label="검색 및 필터">
+      <label class="control">
+        <span>주제</span>
+        <select id="topic-filter" aria-label="주제 필터">
+          <option value="all">전체</option>
+        </select>
+      </label>
+      <label class="control search">
+        <span>검색</span>
+        <input
+          id="search-input"
+          type="search"
+          placeholder="키워드 검색 (예: 이벤트 루프, 캐싱)"
+          aria-label="카드 검색"
+        />
+      </label>
+      <div class="control stats" aria-live="polite" id="card-count"></div>
+    </section>
+
+    <main>
+      <div id="cards" class="card-grid" aria-live="polite"></div>
+    </main>
+
+    <template id="card-template">
+      <article class="card" tabindex="0" role="button" aria-pressed="false">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <p class="card-topic"></p>
+            <h2 class="card-question"></h2>
+            <p class="card-tags" aria-hidden="true"></p>
+            <p class="card-hint">클릭 또는 Enter로 뒤집기</p>
+          </div>
+          <div class="card-face card-back">
+            <p class="card-topic"></p>
+            <div class="card-answer"></div>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="data/flashcards.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

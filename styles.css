@@ -116,8 +116,8 @@ body {
   margin: 0 auto 32px;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 280px));
-  justify-content: start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: stretch;
   gap: 16px;
 }
 
